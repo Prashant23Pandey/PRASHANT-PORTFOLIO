@@ -1,4 +1,5 @@
 const path = require("path");
+const fs = require("fs");
 const express = require("express");
 const compression = require("compression");
 
@@ -92,7 +93,11 @@ app.use((req, res) => {
     return res.status(404).json({ error: "Not found" });
   }
   if (req.method === "GET" && path.extname(req.path) === "") {
-    return res.sendFile(path.join(publicDir, "index.html"));
+    const indexFile = path.join(publicDir, "index.html");
+    if (!fs.existsSync(indexFile)) {
+      return res.status(404).json({ error: "Portfolio UI is not included in this API-only deployment" });
+    }
+    return res.sendFile(indexFile);
   }
   return res.status(404).send("Not found");
 });
