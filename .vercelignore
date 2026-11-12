@@ -1,0 +1,8 @@
+README.md
+docs/
+public/
+tests/
+node_modules/
+.env
+.env.*
+!.env.example

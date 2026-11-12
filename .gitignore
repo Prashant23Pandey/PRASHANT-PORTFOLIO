@@ -1,6 +1,5 @@
 node_modules/
-.env
-.env.*
+.env*
 !.env.example
 *.log
 npm-debug.log*
@@ -9,3 +8,5 @@ playwright-report/
 test-results/
 .DS_Store
 Thumbs.db
+
+.vercel
