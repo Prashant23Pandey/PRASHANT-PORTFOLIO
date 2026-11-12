@@ -1,0 +1,28 @@
+{
+  "name": "sebastien-lempens-portfolio-recreation",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Pixel-accurate recreation of sebastien-lempens.com with a production static server.",
+  "main": "server.js",
+  "type": "commonjs",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "test": "node --test tests/smoke.test.js"
+  },
+  "keywords": [
+    "portfolio",
+    "threejs",
+    "react-three-fiber",
+    "webgl",
+    "express"
+  ],
+  "license": "UNLICENSED",
+  "dependencies": {
+    "compression": "^1.7.4",
+    "express": "^4.21.2"
+  }
+}
